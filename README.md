@@ -8,13 +8,14 @@ The code below is the code you need to call the customClock function in order to
 You can choose which element to append your clock to, the background-color of the clock, the color of the numbers, the size of the clock, the css position and the css float of the clock.
 
 ```javascript
-var element = 'customClock';
+var element = "customClock";
 var backgroundColor = "white";
 var numberColor = "black";
 var size = 400;
 var positionStyle = "initial";
 var cssFloat = "initial";
-init(element, backgroundColor, numberColor, size, positionStyle, cssFloat);
+
+var newClock = new customClock(element, backgroundColor, numberColor, size, positionStyle, cssFloat);
 ```
 
 ## Demo
@@ -33,13 +34,16 @@ The code below is the full code you need to add to your html page in order to ma
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>  
 <script src="customClock.js"></script>
 <script>
-	var element = 'customClock';
-	var backgroundColor = "white";
-	var numberColor = "black";
-	var size = 400;
-	var positionStyle = "initial";
-	var cssFloat = "initial";
-    init(element, backgroundColor, numberColor, size, positionStyle, cssFloat);
+
+var element = "customClock";
+var backgroundColor = "white";
+var numberColor = "black";
+var size = 400;
+var positionStyle = "initial";
+var cssFloat = "initial";
+
+var newClock = new customClock(element, backgroundColor, numberColor, size, positionStyle, cssFloat);
+
 </script>
 ```
 
