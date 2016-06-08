@@ -44,7 +44,7 @@ The code below is the full code you need to add to your html page in order to ma
 ```
 
 
-### init
+### Parameters
 
 | Parameters   		| Type       | Description                                                              				      | Example        |
 |:-----------------:|:----------:|:----------------------------------------------------------------------------------------------:|:--------------:|
