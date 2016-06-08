@@ -1,12 +1,33 @@
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var radius = canvas.height / 2;
-ctx.translate(radius, radius);
-radius = radius * 0.90;
 
-function init(firstVariable, secondVariable){
-	backgroundColor = firstVariable;
-	numberColor = secondVariable;
+function customClock(element, backgroundColor, numberColor, size, positionStyle, cssFloat) {
+	this.element = element;
+	this.backgroundColor = backgroundColor;
+	this.numberColor = numberColor;
+	this.size = size;
+	this.positionStyle = positionStyle;
+	this.cssFloat = cssFloat;
+	
+	createCanvas(element, backgroundColor, numberColor, size, positionStyle, cssFloat);
+}
+
+function createCanvas(element, backgroundColor, numberColor, size, positionStyle, cssFloat){
+	
+	var canvas = document.createElement('canvas');
+
+	var elem = document.getElementById(element);
+	
+	canvas.width = size;
+	canvas.height = size;
+	canvas.style.position = positionStyle;
+	canvas.style.cssFloat = cssFloat;
+
+	elem.appendChild(canvas);
+
+	ctx = canvas.getContext("2d");
+	radius = canvas.height / 2;
+	ctx.translate(radius, radius);
+	radius = radius * 0.90;
+	
 	drawClock(backgroundColor, numberColor);
 	setInterval(function(){ drawClock(backgroundColor, numberColor); }, 1000);
 }
@@ -17,22 +38,17 @@ function drawClock(backgroundColor, numberColor) {
   drawTime(ctx, radius);
 }
 
-function drawFace(ctx, radius, backgroundColor, numberColor) {
-  var grad;
-  
+function drawFace(ctx, radius) {
   ctx.beginPath();
   ctx.arc(0, 0, radius, 0, 2*Math.PI);
   ctx.fillStyle = backgroundColor;
   ctx.fill();
-  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
-  grad.addColorStop(0, '#333');
-  grad.addColorStop(0.5, 'white');
-  grad.addColorStop(1, '#333');
-  ctx.lineWidth = radius*0.1;
+  
+  ctx.lineWidth = radius*0.1; //omtrek lijn grootte
   ctx.stroke();
   
   ctx.beginPath();
-  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI); //cirkel midden grootte
   ctx.fillStyle = numberColor;
   ctx.fill();
 }
@@ -40,7 +56,7 @@ function drawFace(ctx, radius, backgroundColor, numberColor) {
 function drawNumbers(ctx, radius) {
   var ang;
   var num;
-  ctx.font = radius*0.15 + "px arial";
+  ctx.font = radius*0.15 + "px arial"; //text grootte
   ctx.textBaseline="middle";
   ctx.textAlign="center";
   for(num = 1; num < 13; num++){
@@ -76,7 +92,7 @@ function drawTime(ctx, radius){
 
 function drawHand(ctx, pos, length, width) {
     ctx.beginPath();
-    ctx.lineWidth = width;
+    ctx.lineWidth = width; //dikte wijzers
     ctx.lineCap = "round";
     ctx.moveTo(0,0);
     ctx.rotate(pos);
