@@ -29,7 +29,7 @@ This library was created to learn how to make your own library.
 Just download customClock.js, put it in the head of your page and call it. Make sure the height of the parent of the targeted element isn't smaller than the var size. 
 The code below is the full code you need to add to your html page in order to make this library work. Just make sure the src of customClock locates the customClock.js file correctly.
 
-<!--
+```javascript
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>  
 <script src="customClock.js"></script>
 <script>
@@ -41,7 +41,7 @@ The code below is the full code you need to add to your html page in order to ma
 	var cssFloat = "initial";
     init(element, backgroundColor, numberColor, size, positionStyle, cssFloat);
 </script>
--->
+```
 
 
 ### init
