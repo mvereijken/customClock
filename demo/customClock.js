@@ -1,9 +1,20 @@
 
-function init(selector, backgroundColor, numberColor, size, positionStyle, cssFloat){
+function customClock(element, backgroundColor, numberColor, size, positionStyle, cssFloat) {
+	this.element = element;
+	this.backgroundColor = backgroundColor;
+	this.numberColor = numberColor;
+	this.size = size;
+	this.positionStyle = positionStyle;
+	this.cssFloat = cssFloat;
+	
+	createCanvas(element, backgroundColor, numberColor, size, positionStyle, cssFloat);
+}
+
+function createCanvas(element, backgroundColor, numberColor, size, positionStyle, cssFloat){
 	
 	var canvas = document.createElement('canvas');
 
-	var elem = document.getElementById(selector);
+	var elem = document.getElementById(element);
 	
 	canvas.width = size;
 	canvas.height = size;
