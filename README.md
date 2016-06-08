@@ -31,7 +31,6 @@ Just download customClock.js, put it in the head of your page and call it. Make 
 The code below is the full code you need to add to your html page in order to make this library work. Just make sure the src of customClock locates the customClock.js file correctly.
 
 ```javascript
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>  
 <script src="customClock.js"></script>
 <script>
 
