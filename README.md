@@ -4,7 +4,7 @@ A small library that will create an analog clock in an element of your choice. c
 
 ## Code Example
 
-The code below is the code you need to call the customClock function in order to make this library work. The parameters can be changed to whatever you prefer.
+The code below is the code you need to use to call the customClock function (object constructor) in order to make this library work. The parameters can be changed to whatever you prefer.
 You can choose which element to append your clock to, the background-color of the clock, the color of the numbers, the size of the clock, the css position and the css float of the clock.
 
 ```javascript
@@ -28,7 +28,7 @@ This library was created to learn how to make your own library.
 ## Installation
 
 Just download customClock.js, put it under the body tag of your html page and call it. Make sure the height of the parent of the targeted element isn't smaller than the var size. 
-The code below is the full code you need to add to your html page in order to make this library work. Just make sure the src of customClock locates the customClock.js file correctly.
+The code below is the full code you need to add to your html page in order to make this library work. Just make sure the src of customClock locates the customClock.js file correctly. Also make sure this code is executed after the loading of the body by inserting it at the bottom of your html page.
 
 ```javascript
 <script src="customClock.js"></script>
