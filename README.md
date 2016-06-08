@@ -7,7 +7,7 @@ A small library that will create an analog clock in an element of your choice. c
 The code below is the code you need to call the customClock function in order to make this library work. The parameters can be changed to whatever you prefer.
 You can choose which element to append your clock to, the background-color of the clock, the color of the numbers, the size of the clock, the css position and the css float of the clock.
 
-"
+```javascript
 var element = 'customClock';
 var backgroundColor = "white";
 var numberColor = "black";
@@ -15,7 +15,7 @@ var size = 400;
 var positionStyle = "initial";
 var cssFloat = "initial";
 init(element, backgroundColor, numberColor, size, positionStyle, cssFloat);
-"
+```
 
 ## Demo
 See customClock [demo](under construction)
