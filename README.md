@@ -19,7 +19,7 @@ var newClock = new customClock(element, backgroundColor, numberColor, size, posi
 ```
 
 ## Demo
-See customClock [demo](under construction)
+See customClock [demo](http://athena.fhict.nl/users/i313768/customClock/)
 
 ## Motivation
 
